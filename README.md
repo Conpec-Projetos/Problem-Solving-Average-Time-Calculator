@@ -25,12 +25,11 @@ A planilha deve ser baixada e salva como um arquivo CSV na pasta "data" desse pr
 A Regra de Sturges ajuda a determinar o número ideal de intervalos a serem usados ao dividir as idades do conjunto de problemas. Esta regra é baseada na seguinte fórmula:
 
 $$
-k = 1 + \log_2(n)
-\\
-Onde:\\
-$k$ é o número de intervalos (compartimentos)\\
-$n$ é o número de problemas
+\text{Considere: }k = 1 + \log_2 n
+\text{; Onde: } k \text{ é o número de intervalos (compartimentos) e } n \text{ é o número de problemas}
 $$
+
+
 
 A regra fornece um equilíbrio entre ter poucos ou muitos intervalos, tornando a análise mais precisa.
 
