@@ -41,7 +41,7 @@ def sturges_rule(self) -> int:
 
 ### 4. Calculando intervalos
 
-Usando o número de intervalos derivados da Regra de Sturges, o código define os intervalos de intervalo com base nas idades mínima e máxima do conjunto de problemas. O intervalo para cada intervalo é determinado pela divisão do intervalo de idade total pelo número de intervalos.
+Usando o número de intervalos derivados da Regra de Sturges, o código define os intervalos de intervalo com base nas idades mínima e máxima do conjunto de problemas. Cada intervalo é determinado pela divisão do intervalo de idade total pelo número de intervalos.
 
 ```python
 k = self.sturges_rule()
