@@ -47,6 +47,8 @@ Usando o número de intervalos derivados da Regra de Sturges, o código define o
 k = self.sturges_rule()
 min_age, max_age = min(self.problem_ages), max(self.problem_ages)
 interval_size = math.ceil((max_age - min_age) / k)
+
+self.intervals = [(min_age + i * interval_size, min_age + (i + 1) * interval_size - 1) for i in range(k)]
 ```
 
 ### 5. Cálculo de frequência
