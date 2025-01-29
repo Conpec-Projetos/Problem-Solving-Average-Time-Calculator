@@ -7,9 +7,9 @@ import pytz
 class ProblemSolverReader:
     file_path: str
     
-    def get_problem_ages_without_curr_date_column(self) -> list[int]:
+    def get_problem_ages_without_curr_date_column(self, desired_status: str) -> list[int]:
         df = pd.read_csv(self.file_path)
-        df = df[df['status'] == 'in progress']
+        df = df[df['status'] == desired_status]
         
         sp_tz = pytz.timezone('America/Sao_Paulo')
         
@@ -20,9 +20,9 @@ class ProblemSolverReader:
         
         return (curr_date - df['start-date']).dt.days.tolist()
     
-    def get_problem_ages_with_curr_date_column(self) -> list[int]:
+    def get_problem_ages_with_curr_date_column(self, desired_status: str) -> list[int]:
         df = pd.read_csv(self.file_path)
-        df = df[df['status'] == 'in progress']
+        df = df[df['status'] == desired_status]
         
         sp_tz = pytz.timezone('America/Sao_Paulo')
         
