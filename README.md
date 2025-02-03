@@ -1,4 +1,4 @@
-# Guru dos Esforços Orientados a Resolução de Problemas
+# Calculadora de tempo médio de resolução de problemas
 
 ## Introdução
 
