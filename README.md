@@ -2,13 +2,13 @@
 
 ## Introdução
 
-Este projeto analisa o desempenho dos esforços orientados a resolução de problemas em projetos comerciais ao longo do tempo (em dias) a cada mês. Foram usados métodos estatísticos como a Regra de Sturges e a Média Ponderada de Intervalos e Frequências para tirar insights dos dados.
+Este projeto analisa o desempenho dos esforços orientados a resolução de problemas em projetos comerciais ao longo do tempo (em dias). Foram usados métodos estatísticos como a Regra de Sturges e uma Média Ponderada de Intervalos e Frequências para tirar insights dos dados.
 
-É importante mencionar que apenas os problemas marcados como "in progress" são considerados nesta análise, visto que os problemas concluídos não são relevantes para a avaliação de desempenho no mês.
-
-Com essa abordagem, a Conpec poderá ver o seu desempenho nesse quesito de forma mais clara, pois nossos membros poderão navegar pelos resultados exibidos na planilha do PE para cada mês do ano pelo histórico do Google Sheets.
+Quando consideramos apenas os problemas marcados como "in progress" nesta análise, a Conpec pode ver o seu desempenho mensal com clareza, pois nossos membros poderão navegar pelos resultados exibidos na planilha do Dashboard de Projetos para cada mês do ano pelo histórico do Google Sheets.
 
 Por exemplo, se a idade média dos problemas não resolvidos estiver aumentando ao longo do tempo, isso pode indicar que a EJ está enfrentando desafios para resolver problemas prontamente. Por outro lado, uma idade média decrescente pode sugerir que houve melhorias no processo de resolução de problemas.
+
+No entanto, caso seja desejado apenas ver a média até o presente momento do tempo gasto para resolver problemas, basta apenas considerar apenas os problemas marcados como "solved". A propósito, é desse que o cálculo é considerado no Painel Estratégico.
 
 ## Como funciona
 
@@ -83,4 +83,4 @@ def weighted_mean_intervals(self) -> float:
 Para executar o código, basta executar o arquivo `main.py` na raiz do projeto. O código lê a planilha de entrada (especifique o caminho corretamente) e exibe os resultados da análise.
 
 Você pode ajustar o código conforme necessário para atender às suas necessidades de análise.
-Por exemplo, se não quiser usar a coluna "current-date" e confiar no meu código para calcular a idade do problema, basta usar o método  ``get_problem_ages_without_curr_date_column()`` ao invés de  ``get_problem_ages_with_curr_date_column()``
+Por exemplo, se não quiser usar a coluna "current-date" e confiar no meu código para calcular a idade do problema, basta usar o método  ``get_problem_ages_without_curr_date_column()`` ao invés de  ``get_problem_ages_with_curr_date_column()``. Lembre-se de passar como argumento desse método se você deseja considerar problemas "solved" ou "in progress"
