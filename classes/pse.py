@@ -31,7 +31,7 @@ class ProblemSolverEfficiency:
             return 0
         weighted_sum = sum(((a + b) / 2) * f for (a, b), f in zip(self.intervals, self.frequencies))
         total_frequency = sum(self.frequencies)
-        return weighted_sum / total_frequency if total_frequency != 0 else 0
+        return weighted_sum // total_frequency
 
     def calculate_efficiency(self) -> float:
         self.calculate_intervals_and_frequencies()
